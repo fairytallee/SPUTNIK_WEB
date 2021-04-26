@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="style_main.css">
+	<title>Главная страница - Sputnic</title>
+	<link rel="shortcut icon" href="files/sputnic.jpg" type="image/x-icon" id="shortcut-icon" />
+</head>
+<body>
+	<header class="header">
+		<h2 id="head_text">SPUTNIC</h2>
+		<div id="profile-div">
+			<a href=""><img src="files/user.png" id="profile-png" width="30px" height="30px"></a>
+		</div>
+	</header>
+   <header id="head_main">
+            <div id="head_main_name">
+            <h2>
+               <a href="" id="name-link"><p id="main-name">SPUTNIC</p></a>
+            </h2>
+            </div>
+            <div id="profile-main-div">
+			 <a href=""><img src="files/user.png" id="profile-main-png" width="40px" height="40px"></a>
+		    </div>
+    </header>
+
+    <div id="col" id="swup" class="transition-fade">
+    	<div id="top">
+    		<video id="top_video" poster="files/ready_one.jpg" playsinline autoplay muted loop>
+    			<source src="files/ready_one.mp4" type="video/mp4" />
+    		</video>
+    		<div id="info-button"><a href=""><img src="files/info0.png" width="45px" height="45px" id="bp"></a></div>
+    		<div id="play-button"><a href=""><h3 id="bo">Смотреть «Первому игроку приготовиться»</h3></a></div>
+    	</div>
+    	<div id="center-content">
+    		<h1 id="news-title">Новости</h1>
+    		<a href="#"><div id="first-card">
+    			<h3 id="card-text">«Ты станешь легендой»: Новый тизер <br> сиквела «Чудо-женщины»</h3>
+    		</div></a>
+    		
+    	</div>
+    	<div id="articles">
+    		<h1 id="art-title">Наши статьи</h1>
+    		<a href="top_movies.html">
+    			<div id="first-art">
+    				<h4 id="art-text">Топ 5<br>фильмов по<br>нашему мнению</h4>
+    			</div>
+    		</a>
+    		
+    	</div>
+    </div>
+
+   <div id="footer">
+   	<div id="wides">
+   		<a href="https://vk.com/whtdoumean0_o" id="vk">VK</a> <a href="https://www.instagram.com/ilia_dobronravov/" id="inst">Inst</a> <a href="https://twitter.com/whtdoumean0_o" id="twit">Twitter</a>
+   		<p id="que">Если есть какие-нибудь вопросы - пишите</p>
+   		<div class="tooltip"><a id="post" onclick="copyToClipboard('bryilyant16@gmail.com')" onmouseout="outFunc()"><span class="tooltiptext" id="myTooltip" id="myInput">Скопировать в буфер обмена</span><p id="bry">bryilyant16@gmail.com</p></a></div>
+   	</div>
+   	<div id="copy-text">
+   		<p id="copy">&copy 2020 - 2020, Sputnic</p>
+   		<p id="nn">+99</p>
+   		<p id="all">Все права защищены</p>
+   	</div>
+   	<div id="reference">
+   		<a href="#" id="ref">Справка</a>
+   		<a href="#">Пользовательское соглашение</a>
+   	</div>
+   </div>
+   <script type="text/javascript">
+   	function copyToClipboard(str) {
+  var area = document.createElement('textarea');
+
+  document.body.appendChild(area);  
+    area.value = str;
+    area.select();
+    document.execCommand("copy");
+  document.body.removeChild(area);  
+
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Почта скопирована в буфер";
+   }
+   function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Скопировать в буфер обмена";
+   }
+   </script>
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js" type="text/javascript">
+   	var header = $('.header'),
+		scrollPrev = 0;
+
+   $(window).scroll(function() {var scrolled = $(window).scrollTop();
+ 
+	if ( scrolled > 100 && scrolled > scrollPrev ) {
+		header.addClass('out');
+	} else {
+		header.removeClass('out');
+	}
+	scrollPrev = scrolled;
+	});
+   </script>
+</body>
+</html>

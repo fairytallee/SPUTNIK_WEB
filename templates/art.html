@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="width: 50%; margin-left: 23%; padding: 20px; padding-top: 60px; background-color: #333333; border-radius: 15px; margin-bottom: 4%; color: white;">
+    <div style="border-bottom: 1.5px solid grey">
+        <img src="../static/img/articles/{{ art.picture }}" alt="Упс! Какая-то ошибка" style="width: calc(100% + 40px); height: auto; margin-bottom: 10px; margin-left: -20px;">
+        <h1>{{ art.title }}</h1>
+        <p style="line-height: 150%;">{{ art.content }}</p>
+        <p style="margin-top: 6px; color: grey; font-size: 15px; line-height: 22px; margin-left: 5px;">Автор: {{ art.user.name }} {{ art.user.surname }}<br>Дата: {{ art.created_date }}</p>
+    </div>
+    {% if current_user.is_authenticated and current_user == art.user %}
+        <div style="display: flex; flex-direction: row; margin-top: 20px; margin-left: 10px;">
+            <a href="/edit_art/{{ art.id }}" class="sp-buttons">
+                Изменить статью
+            </a>
+            <a href="/delete_art/{{ art.id }}" class="sp-buttons" style="margin-left: 10px;">
+                Удалить статью
+            </a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

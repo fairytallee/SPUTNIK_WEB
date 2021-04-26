@@ -1,0 +1,313 @@
+body {
+  		background: #212121;
+  		height: 100%;
+  		font-family: roboto;
+      height: 100%;
+  	}
+
+   a {text-decoration: none;}
+   a:visited {color: #DCDCDC}
+   a:active {color: #DCDCDC}
+   a:link {color: #DCDCDC}
+
+   #head_main{
+    position: absolute;
+    left: 0; top: 0;
+    background: #333333;
+    color: #fff;
+    width: 100%;
+    height: 80px;
+    z-index: 1010;
+   } 
+   #head_main_name {
+    transition: 0.5s;
+    font-size: 18px;
+    border: solid 3px;
+    border-color: #DCDCDC;
+    border-radius: 7px;
+    width: 132px;
+    height: 42px;
+    color: #DCDCDC;
+    letter-spacing: 1px;
+    margin-top: 16px;
+    margin-left: 30px;
+    position: absolute;
+   }
+   #head_main_name:hover {
+    transform: scale(1.03);
+   }
+
+   #profile-main-div {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin-left: 1450px;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 30px;
+    transition: 0.9s;
+   }
+   #profile-main-png {
+    transition: 0.5s;
+   }
+   #profile-main-png:hover {
+    transform: scale(1.3);
+   }
+   #profile-main-div:hover{
+    border-radius: 10px;
+   }
+
+   #main-name {
+    position: absolute;
+    margin-left: 7px;
+    margin-top: -17px;
+   }
+   #name-link:visited {color: #DCDCDC}
+   #name-link:active {color: #DCDCDC}
+   #name-link:link {color: #DCDCDC}
+   #name-link:hover {color: #fff}
+   .header {
+    position: fixed;
+    height: 65px;
+    padding: 30;
+    background-color: #333333;
+    width: 100%;
+    left: 0; top: 0;
+    padding-left: 30px;
+    margin-top: -10px;
+    color: #DCDCDC;
+    z-index: 1000;
+    transition: 0.5s;
+   }
+   .header.out {
+    transform: translateY(-100%);
+   }
+   #head_text {
+    margin-top: 23px;
+    text-align: left;
+   }
+   #profile-div {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin-left: 1435px;
+    margin-top: -50px;
+    overflow: hidden;
+    border-radius: 30px;
+    transition: 0.9s;
+   }
+   #profile-png {
+    transition: 0.5s;
+   }
+   #profile-png:hover {
+    transform: scale(1.3);
+   }
+   #profile-div:hover{
+    border-radius: 10px;
+   }
+
+   #col { 
+    color: #DCDCDC;
+    background-color: #262626;
+    margin: 0 auto;
+    margin-top: 80px;
+    text-align: center;
+    margin-left: 4.5em;
+    width: 90%;
+    height: 4500px;
+    position: all;
+   }
+
+   #theme {
+    text-align: center;
+    position: absolute;
+    margin-left: 10em;
+    margin-top: 40px;
+    font-size: 30px;
+   }
+   #theme_dis {
+    position: absolute;
+    margin-top: 80px;
+    font-size: 12px;
+    margin-left: 400px;
+    color: #bdbdbd;
+   }
+
+   #col ul {
+   	text-align: center;
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 10px;
+   }
+   #col li {
+   	list-style: none;
+   	float: left;
+   	text-align: center;
+   	margin-bottom: 100px;
+   }
+   #col li a:link {
+    color: #DCDCDC;
+   }
+   #col li a:active {
+    color: #DCDCDC;
+   }
+   #col li a:visited {
+    color: #DCDCDC;
+   }
+   #col li a:hover {
+    color: #fff;
+   }
+   #film-poster {
+    transition: 0.3s;
+    z-index: 0;
+   }
+   #film-poster:hover {
+    box-shadow: 0 0 70px #9c9c9c;
+    transform: scale(1.04);
+   }
+   #title {
+    transition: 0.9s;
+   }
+   #title:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 20px #9c9c9c;
+   }
+   #description {
+   	text-align: center;
+    width: 1250px;
+   	font-size: 16px;
+   }
+  
+   #footer {
+    width: 100%;
+    background-color: #333333;
+    color: #DCDCDC;
+    height: 180px;
+    left: 0%;
+    bottom: -530%;
+    position: absolute;
+    padding-top: 15px;
+   }
+
+   #wides {
+    font-size: 18px;
+    margin: 0 auto;
+    width: 70%;
+    height: 86px;
+    text-align: center;
+    border-bottom: solid;
+    border-color: #4f4f4f;
+    border-bottom-width: 1.5px;
+    padding-bottom: 15px;
+    margin-bottom: -55px;
+   }
+   #wides a {
+   }
+   #wides a:link {color: #bdbdbd}
+   #wides a:active {color:#bdbdbd}
+   #wides a:visited {color:#bdbdbd}
+   #wides a:hover {color: #DCDCDC;}
+   #wides a {
+    margin-left: 0%;
+   }
+      
+   #vk {
+    margin-right: 1em;
+   }
+   #inst {
+    margin-right: 1em;
+   }
+   #que {
+    font-size: 5px;
+    font-size: 15px;
+    margin-bottom: -0.01px;
+   }
+   #post {
+    font-size: 15px;
+    cursor: pointer;
+   }
+
+   .tooltip p {transition: 0.3s;}
+   .tooltip p:hover {color: #fff; transform: scale(1.02);}
+
+   .tooltip {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    text-align: center;
+   }
+
+   .tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    width: 220px;
+    z-index: 1;
+    bottom: -50%;
+    left: 50%;
+    margin-left: -120px;
+    opacity: 0;
+    transition: opacity 0.5s;
+   }
+
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: -35%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+    transform: rotate(180deg);
+  }
+ 
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+   #copy-text {
+    text-align: left;
+    margin-left: 25px;
+    margin-top: 75px;
+   }
+   #copy {
+    font-size: 17px;
+   }
+   #nn {
+    background-color: #4a4a4a;
+    padding: 2px;
+    width: 24px;
+    margin-left: 185px;
+    margin-top: -35.5px;
+    font-size: 13px;
+    border-radius: 4px;
+   }
+   #all {
+    color: #bdbdbd;
+    margin-top: -30.5px;
+    margin-left: 230px;
+    font-size: 14px;
+   }
+   #reference {
+    margin-left: 26px;
+    margin-top: -5px;
+    font-size: 13px;
+   }
+   #ref {
+    margin-right: 10px;
+   }
+   #reference a:link {color: #bdbdbd}
+   #reference a:active {color:#bdbdbd}
+   #reference a:visited {color:#bdbdbd}
+   #reference a:hover {color: #DCDCDC}
+
+   .transition-fade {
+   transition: 0.4s;
+   opacity: 1;
+  }

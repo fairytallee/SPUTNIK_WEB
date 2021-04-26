@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 	<link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"> -->
+	<link rel="stylesheet" type="text/css" href="../static/css/all_css.css">
+	<title>{{ title }}</title>
+	<link rel="shortcut icon" href="../static/img/sputnic.jpg" type="image/x-icon" id="shortcut-icon" />
+</head>
+<body>
+	<div class="conteiner">
+	<header class="header">
+		<a href="/" id="name-link"><h2 id="head_text">SPUTNIC</h2></a>
+		{% if current_user.is_authenticated %}
+             <a class="" href="/profile" id="name-link" style="position: absolute; right: 48px; top: 28px; font-size: 18px; font-weight: bold;">{{ current_user.name }} {{current_user.surname}}</a>
+        {% endif %}
+		<div id="profile-div">
+			<a href="/profile"><img src="../static/img/user.png" id="profile-png" width="30px" height="30px"></a>
+		</div>
+	</header>
+   <header id="head_main">
+            <div id="head_main_name">
+            <h2>
+               <a href="/" id="name-link"><p id="main-name">SPUTNIC</p></a>
+            </h2>
+            </div>
+		    {% if current_user.is_authenticated %}
+                    <a class="" href="/profile" id="name-link" style="position: absolute; right: 83px; top: 28px; font-size: 22px; font-weight: bold;">{{ current_user.name }}</a>
+            {% else %}
+                    <a class="sp-buttons" href="/login" style="position: absolute; right: 83px; top: 21px;">Войти</a>
+            {% endif %}
+            <div id="profile-main-div">
+			 <a href="/profile"><img src="../static/img/user.png" id="profile-main-png" width="40px" height="40px"></a>
+		    </div>
+    </header>
+    {% block content %}{% endblock %}
+
+
+    <div id="footer">
+	   	<div id="wides">
+	   		<a href="https://vk.com/whtdoumean0_o" id="vk">VK</a> <a href="https://www.instagram.com/ilia_dobronravov/" id="inst">Inst</a> <a href="https://twitter.com/whtdoumean0_o" id="twit">Twitter</a>
+	   		<p id="que">Если есть какие-нибудь вопросы - пишите</p>
+	   		<div class="tooltip"><a id="post" onclick="copyToClipboard('bryilyant16@gmail.com')" onmouseout="outFunc()"><span class="tooltiptext" id="myTooltip" id="myInput">Скопировать в буфер обмена</span><p id="bry">bryilyant16@gmail.com</p></a></div>
+	   	</div>
+	   	<div id="copy-text">
+	   		<p id="copy">&copy 2020 - 2021, Sputnic</p>
+	   		<p id="nn">99+</p>
+	   		<p id="all">Все права защищены</p>
+	   	</div>
+	   	<div id="reference">
+	   		<a href="/none" id="ref">Справка</a>
+	   		<a href="/none">Пользовательское соглашение</a>
+	   	</div>
+   </div>
+   </div>
+   <script type="text/javascript">
+	   	function copyToClipboard(str) {
+	   		var area = document.createElement('textarea');
+
+		 	document.body.appendChild(area);  
+			area.value = str;
+			area.select();
+			document.execCommand("copy");
+			document.body.removeChild(area);  
+
+			 var tooltip = document.getElementById("myTooltip");
+			 tooltip.innerHTML = "Почта скопирована в буфер";
+	   	}
+
+	    function outFunc() {
+	    	var tooltip = document.getElementById("myTooltip");
+	    	tooltip.innerHTML = "Скопировать в буфер обмена";
+	    }
+   </script>
+</body>
+</html>

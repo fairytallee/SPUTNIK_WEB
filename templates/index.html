@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div id="col" id="swup" class="transition-fade">
+      <div id="top">
+        <video id="top_video" poster="../static/img/ready_one.jpg" playsinline autoplay muted loop>
+          <source src="../static/video/ready_one.mp4" type="video/mp4" />
+        </video>
+        <a href="/none"><div id="info-button"><img src="../static/img/info.png" width="45px" height="45px" id="bp"></div></a>
+        <a href="/none"><div id="play-button"><h3 id="bo">Смотреть «Первому игроку приготовиться»</h3></div></a>
+      </div>
+
+      <div id="center-content">
+          <div style="width: 100%; display: flex; margin-bottom: 10px;">
+            <div style="left: 50px;"><h1 id="news-title" style="margin-left: 60px;">Новости</h1></div>
+            {% if current_user.is_authenticated and current_user.id == 1 %}
+              <div style="right: 40px; position: absolute; margin-top: 7px;"><a href="/add_news_item" id="name-link"><h3>Добавить новость</h3></a></div>
+            {% endif %}
+          </div>
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; margin-top: 45px;">
+            {% for item in news %}
+              <div id="card" style="background-image: url(../static/img/news/{{ item.picture }});">
+                <a href="/news_item/{{ item.id }}"><div style="width: 70%; height: 80%; margin: auto; margin-top: 7%; align-content: center; overflow: hidden; text-overflow: ellipsis;">
+                  <h3 id="card-text">{{item.title}}</h3>
+                </div></a>
+              </div>
+            {% endfor %}
+          </div>
+
+      </div>
+
+      {% if current_user.is_authenticated %}
+        <div id="articles">
+          <div style="width: 100%; display: flex; margin-bottom: 10px;">
+          <div style="left: 50px;"><h1 id="art-title" style="margin-left: 60px;">Наши статьи</h1></div> <div style="right: 40px; position: absolute; margin-top: 7px;"><a href="/add_art" id="name-link"><h3>Добавить статью</h3></a></div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
+            {% for item in articles %}
+              <div id="art" style="background-image: url(../static/img/articles/{{ item.picture }});">
+                <a href="/art/{{ item.id }}"><div style="width: 70%; height: 80%; margin: auto; margin-top: 7%; align-content: center; overflow: hidden; text-overflow: ellipsis;">
+                  <h3 id="art-text">{{item.title}}</h3>
+                </div></a>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+  </div>
+{% endblock %}

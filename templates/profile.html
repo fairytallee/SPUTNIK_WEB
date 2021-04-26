@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div style="width: 50%; margin-left: 23%; margin-top: 10%; background-color: #333333; border-radius: 15px; padding: 2%; margin-bottom: 10.5%;">
+		<div style="display: flex; border-bottom: 1.5px solid grey; padding-bottom: 20px; margin-bottom: -60px;">
+			<img width="200px" height="200px" src="../static/img/user.png" style="float: left; margin-top: 10px;">
+			<ul style="list-style: none; color: white; float: left;">
+				{% if current_user.is_authenticated %}
+					<li style="margin-bottom: -15px;"><h1>{{ current_user.name }}</h1></li>
+					<li style="margin-bottom: -8px;"><h1>{{ current_user.surname }}</h1></li>
+					<li style="margin-bottom: -10px;"><h2 style="font-weight: normal; font-size: 20px;">{{ current_user.age }} лет</h2></li>
+					<li><h2 style="font-weight: normal; font-size: 20px;">{{ current_user.email }}</h2></li>
+            	{% else %}
+                    <li><h2>Анонимный профиль</h2></li>
+            	{% endif %}
+			</ul>
+		</div>
+		<div style="display: flex; align-items: flex-end; margin-top: 100px;">
+			{% if current_user.is_authenticated %}
+				<a class="sp-buttons" href="/logout">Выйти</a>
+            {% else %}
+	            <a class="sp-buttons" href="/register">Зарегестрироваться</a>
+		        <a class="sp-buttons" href="/login" style="margin-left: 20px;">Войти</a>
+            {% endif %}
+		</div>
+	</div>
+{% endblock %}

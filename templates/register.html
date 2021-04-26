@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div style="width: 24%; margin-left: 38%; padding: 20px; color: white; margin-top: 180px; margin-bottom: -80px; background-color: #333333; border-radius: 15px; margin-bottom: 10%;">
+    <h1 style="font-size: 43px; text-align: center;">Регистрация</h1>
+    <form action="" method="post" style="margin-top: 50px;">
+        {{ form.hidden_tag() }}
+
+        <p>
+            {{ form.name.label(class="form-control-label") }}<br>
+            {{ form.name(class="form-control", type="name") }}<br>
+            {% for error in form.name.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.surname.label(class="form-control-label") }}<br>
+            {{ form.surname(class="form-control", type="surname") }}<br>
+            {% for error in form.surname.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.age.label(class="form-control-label") }}<br>
+            {{ form.age(class="form-control", type="age") }}<br>
+            {% for error in form.age.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.email.label(class="form-control-label") }}<br>
+            {{ form.email(class="form-control", type="email") }}<br>
+            {% for error in form.email.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password.label(class="form-control-label") }}<br>
+            {{ form.password(class="form-control", type="password") }}<br>
+            {% for error in form.password.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </p>
+        <p>{{ form.remember_me(style="margin-left: 10px;") }} {{ form.remember_me.label(style="font-weight: bold;") }}</p>
+        <p>{{ form.submit(type="submit", class="sp-buttons", style="margin-left: 10px;") }}</p>
+        <p><a href="/login" style="text-decoration: underline;">Войдите</a>, если есть аккаунт</p>
+        <div>{{ message }}</div>
+    </form>
+    </div>
+{% endblock %}

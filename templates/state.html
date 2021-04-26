@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="width: 50%; margin-left: 23%; padding-top: 10%; background-color: #333333; border-radius: 15px; padding: 2%; margin-bottom: 10%; color: white;">
+    <img src="../static/img/articles/{{ item.picture }}" alt="Упс! Какая-то ошибка" style="width: 100%; height: auto; margin-bottom: 40px;">
+    <h1>{{ art.title }}</h1>
+    <p>{{ art.content }}</p>
+</div>
+{% endblock %}
