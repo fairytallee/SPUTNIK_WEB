@@ -17,9 +17,6 @@
 		{% if current_user.is_authenticated %}
              <a class="" href="/profile" id="name-link" style="position: absolute; right: 48px; top: 28px; font-size: 18px; font-weight: bold;">{{ current_user.name }} {{current_user.surname}}</a>
         {% endif %}
-		<div id="profile-div">
-			<a href="/profile"><img src="../static/img/user.png" id="profile-png" width="30px" height="30px"></a>
-		</div>
 	</header>
    <header id="head_main">
             <div id="head_main_name">
